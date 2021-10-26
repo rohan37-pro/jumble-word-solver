@@ -1,4 +1,5 @@
 import itertools
+import os 
 
 while True:
 	jumble = input("enter a jubmle word : ")
@@ -12,7 +13,7 @@ while True:
 		i = "".join(i)
 		lis.append(i)
 
-	with open("C:\\Users\\rohan\\Desktop\\codes\\txt\\dictionary_words.txt",'r') as file:
+	with open(f"{os.getcwd()}/dictionary_words.txt",'r') as file:
 		words = file.readlines()
 
 		words_lis = []
