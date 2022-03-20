@@ -27,7 +27,13 @@ with open(f"{os.getcwd()}/dictionary2.0.txt",'r') as file:
 		alpha_range[i].append(None)
 		#print(alpha_range)
 
-
+message = """your computer might get hanged so
+if you have 4 gb of ram :
+	enter a jumble word lessthen or equal to 10 letters.
+if you have 8 gb of ram :
+	enter a jumble word lessthen or equal to 11 letters.
+"""
+print(message)
 
 while True:
 	jumble = input("enter a jubmle word : ")
@@ -44,6 +50,7 @@ while True:
 
 	start = time.time()
 	for word in lis:
+		word = word.lower()
 		if word in words_lis[alpha_range[word[0]][0]:alpha_range[word[0]][1]]:
 			print(f"{word} --> query ends in {time.time() - start} secs...")
 
